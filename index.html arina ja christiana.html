@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css?family=Arimo');
@@ -68,6 +70,48 @@
     .menu-main a:hover {
         background: rgba(0, 0, 0, .3);
     }
+    #dark {
+        background: rgba(17, 17, 17, 0.856);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    #yhteystiedotbox {
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        padding: 15px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        color: rgb(152, 240, 255);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-color: rgb(53, 53, 53);
+    }
+    #tiedot {
+        color: white;
+    }
+    #dark:target {display: block;}
+    .close {
+        display: inline-block;
+        border: 1px solid #353535;
+        color: #252525;
+        padding: 0 12px;
+        margin: 80px;
+        text-decoration: none;
+        background: #f0f0f0;
+        font-size: 14pt;
+        cursor:pointer;
+      }
+      .close:hover {background: #8eeeff;}
+    }
 
     @media (max-width: 830px) {
         .menu-main {
@@ -92,12 +136,17 @@
             padding: 20px 20px;
             font-size: 16px;
         }
+        #textbox {
+            position: absolute;
+            display: flex;
+        }
     }
 
     @media (max-width: 630px) {
         .menu-main li {
             display: block;
         }
+        
     }
 </style>
 
@@ -105,12 +154,12 @@
 
     <nav class="top-menu">
         <ul class="menu-main">
-            <li class="left-item"><a href="">Etusivu</a></li>
+            <li class="left-item"><a href="file:///Users/arinasuzi/Documents/GitHub/koulu-arina-chris/index.html%20arina%20ja%20christiana.html">Etusivu</a></li>
             <li class="left-item"><a href="">Meistä</a></li>
             <li class="left-item"><a href="">Galleria</a></li>
             <li class="right-item"><a href="">Hinnasto</a></li>
-            <li class="right-item"><a href="">Tilaa</a></li>
-            <li class="right-item"><a href="">Yhteystiedot</a></li>
+            <li class="right-item"><a href="https://wolt.com/en/?gclid=CjwKCAjw7fuJBhBdEiwA2lLMYQ9ASef07As1VM8Qt9Xzmwp18hT-pc6r4vadmSzyLuwL3IfNAwrE6BoC30kQAvD_BwE">Tilaa</a></li>
+            <li class="right-item"><a href="#dark">Yhteystiedot</a></li>
         </ul>
         <a class="logo" href=""><img src="logotravel3.png"></a>
         
@@ -126,6 +175,16 @@
           </div>
         </div>
       </div>
-
+      
+     
+      <div id="dark">
+        <div id="yhteystiedotbox">
+            <h2>Yhteystiedot</h2> 
+            <p id="tiedot">tiedot</p>
+            <a href="#" class="close">Sulje ikkuna</a>
+        </div>
+    </div>
+    <a href="#dark" id="main"></a>
 </body>
+
 </html>  
